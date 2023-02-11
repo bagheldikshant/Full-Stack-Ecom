@@ -17,7 +17,7 @@ export default function Home() {
       <main className={styles.main}>
         <div className={styles.description}>
           <p className='bg-[red]'>
-            Get started by editing&nbsp;
+            Get started b editing&nbsp;
             <code className={styles.code}>pages/index.tsx</code>
           </p>
           <div>

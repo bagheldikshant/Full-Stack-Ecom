@@ -2,6 +2,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import { Inter } from '@next/font/google'
 import styles from '@/styles/Home.module.css'
+import LayoutMain from '@/components/Layout'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -14,10 +15,11 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className={styles.main}>
+<LayoutMain>
+      {/* <main className={styles.main}>
         <div className={styles.description}>
-          <p className='bg-[red]'>
-            Get started b editing&nbsp;
+          <p>
+            Get started by editing&nbsp;
             <code className={styles.code}>pages/index.tsx</code>
           </p>
           <div>
@@ -117,7 +119,8 @@ export default function Home() {
             </p>
           </a>
         </div>
-      </main>
+      </main> */}
+</LayoutMain>
     </>
   )
 }

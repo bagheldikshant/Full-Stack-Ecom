@@ -1,9 +1,14 @@
 import LayoutMain from '@/components/Layout'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import Products from "@/components/Products"
+import axios from 'axios';
 
 const products = () => {
+  
   return (
-    <LayoutMain><div className='bg-white'>DashBoooraed</div></LayoutMain>
+    <LayoutMain>
+      <Products/>
+    </LayoutMain>
     
   )
 }

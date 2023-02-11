@@ -13,6 +13,7 @@ import {
   XMarkIcon,
   Cog6ToothIcon,
 } from "@heroicons/react/24/outline";
+import Products from "./Products";
 
 const navigation = [
   { name: "Products", href: "/products", icon: HomeIcon, current: true },
@@ -251,6 +252,7 @@ export default function LayoutMain({ children }) {
                 {children}
               </div> */}
               {/* <GeneralDashboard /> */}
+              <Products />
             </div>
           </main>
         </div>

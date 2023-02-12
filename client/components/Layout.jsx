@@ -1,6 +1,7 @@
 import { Fragment, useState } from "react";
 import { Dialog, Transition } from "@headlessui/react";
 import Navbar from "@/components/Navbar";
+import { useRouter } from "next/router";
 // import GeneralDashboard from "@/components/dashboard/GeneralDashboard";
 import {
   Bars3Icon,
@@ -35,6 +36,9 @@ function classNames(...classes) {
 
 export default function LayoutMain({ children }) {
   const [sidebarOpen, setSidebarOpen] = useState(false);
+  const router = useRouter();
+  const currentUrl = router.pathname + router.query;
+  console.log(currentUrl);
 
   return (
     <>
@@ -251,7 +255,7 @@ export default function LayoutMain({ children }) {
               <div className="mx-auto max-w-7xl px-4 sm:px-6 md:px-8">
                 {children}
               </div>
-              {/* <Products /> */}
+              {currentUrl === "" && <Products />}
             </div>
           </main>
         </div>

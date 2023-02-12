@@ -1,11 +1,18 @@
 import React, { useState } from "react";
 import { MagnifyingGlassIcon } from "@heroicons/react/24/outline";
+import { ShoppingCartIcon } from "@heroicons/react/24/outline";
+import { useRouter } from "next/router";
 
 const Navbar = () => {
   const [searchTerm, setSearchTerm] = useState("");
+  const router = useRouter();
 
   const handleChange = (event) => {
     setSearchTerm(event.target.value);
+  };
+
+  const cartDiv = () => {
+    router.push("/cart");
   };
   return (
     <div className="w-full z-[98] fixed top-0 flex items-center px-[4%] bg-white text-black h-[84px]">
@@ -58,14 +65,10 @@ const Navbar = () => {
           {" "}
           <div className="">
             <p className="text-[14px]  font-medium text-[#252733] pr-4 group-hover:text-gray-900">
-              Tom Cook
+              Your Cart
             </p>
           </div>
-          <img
-            className="inline-block h-10 w-10 rounded-full"
-            src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-            alt=""
-          />
+          <ShoppingCartIcon onClick={cartDiv} className="cursor-pointer" />
         </div>
       </div>
     </div>

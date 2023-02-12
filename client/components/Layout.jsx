@@ -5,7 +5,7 @@ import Navbar from "@/components/Navbar";
 import {
   Bars3Icon,
   CalendarIcon,
-  ChartBarIcon,
+  ShoppingCartIcon,
   FolderIcon,
   HomeIcon,
   InboxIcon,
@@ -19,7 +19,7 @@ const navigation = [
   { name: "Products", href: "/products", icon: HomeIcon, current: true },
   { name: "Categories", href: "#", icon: UsersIcon, current: false },
   { name: "Orders", href: "#", icon: FolderIcon, current: false },
-  { name: "Customers", href: "#", icon: CalendarIcon, current: false },
+  { name: "Your Cart", href: "/cart", icon: ShoppingCartIcon, current: false },
   { name: "Inventory", href: "#", icon: InboxIcon, current: false },
 ];
 const setting = {
@@ -248,11 +248,10 @@ export default function LayoutMain({ children }) {
           <main className="flex-1">
             <div className="">
               <Navbar />
-              {/* <div className="mx-auto max-w-7xl px-4 sm:px-6 md:px-8">
+              <div className="mx-auto max-w-7xl px-4 sm:px-6 md:px-8">
                 {children}
-              </div> */}
-              {/* <GeneralDashboard /> */}
-              <Products />
+              </div>
+              {/* <Products /> */}
             </div>
           </main>
         </div>
